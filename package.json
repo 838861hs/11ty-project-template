@@ -1,0 +1,25 @@
+{
+  "name": "eleventy-play",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "concurrently \"npm run serve:11ty\" \"npm run watch:sass\"",
+    "serve:11ty": "eleventy --serve",
+    "watch:sass": "sass --watch src/assets/scss/:dist/assets/css",
+    "build:sass": "sass src/assets/scss:dist/assets/css",
+    "build:11ty": "eleventy",
+    "build": "npm run build:sass && npm run build:11ty"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "concurrently": "^9.2.1",
+    "ejs": "^4.0.1",
+    "prettier": "^3.8.1",
+    "prettier-plugin-ejs": "^1.0.3",
+    "sass": "^1.97.3"
+  }
+}
